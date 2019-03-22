@@ -4,8 +4,6 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-struct stat s;
-
 int main(int argc, char const *argv[]) {
   if(argc != 3){
     printf("yo not 3 args.... you failed\n" );
@@ -28,7 +26,7 @@ int main(int argc, char const *argv[]) {
   if(ok == -1)return 1;
   ok = write(f2, buf, sizeof(buf));
   if(ok == -1)return 1;
-  
+
   close(f);
   close(f2);
   return 0;
